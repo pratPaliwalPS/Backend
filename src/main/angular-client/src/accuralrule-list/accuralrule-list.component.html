@@ -1,0 +1,92 @@
+<h3>Accural List:</h3> 
+<div>
+  <table style="border: 1px solid black;" ng-disabled="">
+<tr>
+  <th>accrualRuleSeqNumber</th>
+  <th>contractingparty</th>
+  <th >contract</th>
+  <th>endUser</th>
+  <th>status</th>
+  <th>isdeleted</th>
+  <th>updatedBy</th>
+</tr>
+<tr *ngFor="let b of accurals?.content">
+  <td>{{b.accrualRuleSeqNumber}}</td>
+  <td>{{b.contractingparty}}</td>
+  <td>{{b.contract}}</td>
+  <td>{{b.endUser}}</td>
+  <td>{{b.status}}</td>
+  <td>{{b.isdeleted}}</td>
+  <td>{{b.updatedBy}}</td>
+  <td><button class="btn btn-danger" (click)="deleteAccuralRule(b.accrualRuleSeqNumber)"> Delete AccuralRule</button></td>
+  <td><button type="button" (click)="loadAccuralToEdit(b.accrualRuleSeqNumber)" >Edit</button> </td> 
+  </tr>
+  </table>
+</div>
+<br/><br>
+<button class="btn btn-save" routerLink="/add"> Create AccuralRule</button>
+
+<div>
+    <h3 *ngIf="accuraIdToUpdate; else create"> 
+        Update Accural for Id: {{accuraIdToUpdate}}
+     </h3>
+     <ng-template #create>
+        <h3> Create Accural </h3>
+     </ng-template>
+     <div>
+        <form [formGroup]="accuralForm" (ngSubmit)="onAccuralFormSubmit()">
+            <table ng-disabled="button_clicked">
+                
+             <tr><td>Enter contractingparty</td><td><input formControlName="contractingparty"></td></tr>
+                  <tr><td>Enter contract</td><td><input formControlName="contract">
+                    
+                    </td></tr>
+                    <tr><td>Enter endUser</td><td><input formControlName="endUser">
+                      
+                      </td></tr>	
+                      <tr><td>Enter status</td><td><input formControlName="status">
+                        
+                        </td></tr>
+                        <tr><td>Enter isdeleted</td><td><input formControlName="isdeleted">
+                          
+                          </td></tr>
+                          <tr><td>Enter updatedBy</td><td><input formControlName="updatedBy">
+                  </td></tr>
+                      
+                    <tr><td colspan="2">
+                    <button *ngIf="!accuraIdToUpdate">Save</button>  
+                    <button *ngIf="accuraIdToUpdate">UPDATE</button>   
+                    </td></tr>
+                  </table>
+           </form>
+           </div>
+           
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

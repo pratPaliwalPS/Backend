@@ -1,0 +1,42 @@
+Context path "OrderIntakeTool" set in application.properties file which can be configurable.
+port is set 9090 in application.properties file
+in this project JMS disabled in Root class. if you want JMS as well just remove the exclude part of @SpringBootApplication
+
+To access Swagger documentation:http://localhost:9090/OrderIntakeTool/swagger-ui.html
+Controller URL: http://localhost:9090/OrderIntakeTool/accrualrule
+
+for importing oracle jar to local repo 
+https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/
+
+
+****************************
+checkin code to github
+implement logging
+add Angular 4 code
+implement Spring MVC
+implement security
+imlement property file
+implent global error handling
+implement pagging
+implement grid with paging
+implement a search page.
+Enable /disable jms in spring boot:@SpringBootApplication(exclude = JmsAutoConfiguration.class)
+Understand hikari CP and its usage "http://www.baeldung.com/hikaricp"
+implement custom error handler
+
+implement consumption of restful by rest template.
+implement profile active feature
+implement headers (Single as well as multiple)
+
+
+need to implement
+curd operation
+connect with angular
+Default coustom handler
+whitelistallowable method user(single method) admin(all rights)
+Attachment upload and download 
+
+
+
+
+****************************

@@ -1,0 +1,42 @@
+
+<div class="col-md-6">
+    <h2 class="text-center">Add AccuralRule</h2>
+  <form>
+    <div class="form-group">
+      <label for="accrualRuleSeqNumber">AccrualRuleSeqNumber:</label>
+      <input  [(ngModel)]="accuralrule.accrualRuleSeqNumber" placeholder="AccrualRuleSeqNumber" name="accrualRuleSeqNumber" class="form-control" id="accrualRuleSeqNumber">
+    </div>
+  
+    <div class="form-group">
+      <label for="contractingparty">Contractingparty:</label>
+      <input [(ngModel)]="accuralrule.contractingparty" placeholder="Contractingparty" name="contractingparty" class="form-control" id="contractingparty">
+    </div>
+  
+    <div class="form-group">
+      <label for="lastName">Contract:</label>
+     <input [(ngModel)]="accuralrule.contract" placeholder="Contract" name="contract" class="form-control" id="contract">
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">endUser:</label>
+       <input [(ngModel)]="accuralrule.endUser" placeholder="EndUser" name="endUser" class="form-control" id="endUser">
+      </div>
+
+      <div class="form-group">
+        <label for="status">status:</label>
+       <input [(ngModel)]="accuralrule.status" placeholder="status" name="status" class="form-control" id="status">
+      </div>
+
+      <div class="form-group">
+        <label for="isdeleted">isdeleted:</label>
+       <input [(ngModel)]="accuralrule.isdeleted" placeholder="isdeleted" name="isdeleted" class="form-control" id="isdeleted">
+      </div>
+
+      <div class="form-group">
+        <label for="updatedBy">updatedBy:</label>
+       <input [(ngModel)]="accuralrule.updatedBy" placeholder="updatedBy" name="updatedBy" class="form-control" id="updatedBy">
+      </div>
+  
+    <button class="btn btn-success" (click)="craeteAccuralRule(accuralrule)">Create</button>
+  </form>
+  </div>
